@@ -1,0 +1,24 @@
+@mixin fs($rem) {
+	font-size: ($rem / 16 * 1rem);
+}
+
+@mixin _1366 {
+	@media (max-width: 1355px) {
+		@content;
+	}
+}
+@mixin _1024 {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin _768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin _600 {
+	@media (max-width: 600px) {
+		@content;
+	}
+}

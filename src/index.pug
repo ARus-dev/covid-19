@@ -1,0 +1,36 @@
+extends views/default
+include views/mixins
+
+block variables
+	- const title = 'Gulp'
+
+block content
+	header
+		.header
+			.header__top
+				.header__warning
+					p COVID-19 Risk Assessment Tool is now available.
+					a(href='#') Learn more
+						+svg('arrow-right', 'arrow')
+				nav.header__nav
+					.logo.header__logo
+						+svg('logo', 'logo')
+					ul.header__menu
+						li
+							a.header__link(href='#') Products
+						li
+							a.header__link(href='#') Blog
+						li
+							a.header__link(href='#') Careers
+						li
+							a.header__link(href='#') Contact			
+			.header__body
+				.header__content
+					h1.header__title.
+						COVID-19 Risk 
+						Assessment Tool
+					p.header__text A set of solutions designed to help quickly identify coronavirus symptoms 
+						|and get reliable information regarding COVID-19 concerns.
+					button.btn.header__btn See how to use it
+				.header__img
+					img(src='img/header/header-img.png' alt="Application interface")
