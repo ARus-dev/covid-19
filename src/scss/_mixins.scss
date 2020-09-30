@@ -22,3 +22,8 @@
 		@content;
 	}
 }
+@mixin _480 {
+	@media (max-width: 480px) {
+		@content;
+	}
+}

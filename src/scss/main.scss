@@ -27,6 +27,10 @@ img {
 	max-width: 100%;
 }
 
+h1, h2, h3 {
+	color: $title-color;
+}
+
 .icon {
 	&_arrow {
 		height: 12px;
@@ -35,6 +39,10 @@ img {
 	&_logo {
 		height: 32px;
 		width: 156px;
+	}
+	&_help {
+		height: 96px;
+		width: 96px;
 	}
 }
 
@@ -153,12 +161,12 @@ img {
 
 		@include _768 {
 			margin: 0;
-			padding: 0 30px;
+			padding: 15px 30px;
 			width: 100%;
 		}
 
 		@include _600 {
-			padding: 0 15px;
+			padding: 15px;
 		}
 	}
 
@@ -200,5 +208,89 @@ img {
 		&>img {
 			max-width: 1000px;
 		}
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 1000px;
+
+	@include _1366 {
+		width: 960px;
+	}
+
+	@include _768 {
+		margin: 0;
+		padding: 0 30px;
+		width: 100%;
+	}
+
+	@include _600 {
+		padding: 0 15px;
+	}
+}
+
+.section {
+	color: $text-color;
+	padding: 120px 0;
+
+	@include _768 {
+		padding: 40px 0;
+	}
+
+	&_gray {
+		background-color: $color-gray;
+	}
+
+	&__info {
+		margin-bottom: 60px;
+		@include _768 {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		@include fs(37);
+		@include _768 {
+			@include fs(28);
+			text-align: center;
+		}
+	}
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+
+	@include _768 {
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__item {
+		width: 295px;
+
+		@include _768 {
+			margin-bottom: 30px;
+			width: 50%;
+		}
+
+		@include _480 {
+			width: 100%;
+		}
+	}
+
+	&__img {
+		margin-bottom: 26px;
+	}
+
+	&__title {
+		@include fs(22);
+		margin-bottom: 19px;
+	}
+
+	&__text {
+		@include fs(17);
 	}
 }

@@ -2,7 +2,7 @@ extends views/default
 include views/mixins
 
 block variables
-	- const title = 'Gulp'
+	- const title = 'COVID-19'
 
 block content
 	header
@@ -34,3 +34,27 @@ block content
 					button.btn.header__btn See how to use it
 				.header__img
 					img(src='img/header/header-img.png' alt="Application interface")
+	main
+		section.section.section_gray
+			.wrapper
+				.section__info
+					h2.section__title How it helps people
+				.row.section__row
+					.row__item
+						.row__img
+							+svg('triage', 'help')
+						h3.row__title Triage
+						p.row__text The COVID-19 health risk is clearly stated at the end of the interview 
+							|thanks to the five-level triage.
+					.row__item
+						.row__img
+							+svg('recommendation', 'help')
+						h3.row__title Recommendation
+						p.row__text Our Medical Team has prepared detailed recommendations and advice on what to
+							| do next depending on the interview results.
+					.row__item
+						.row__img
+							+svg('local-info', 'help')
+						h3.row__title Local information
+						p.row__text We provide phone numbers of local health authorities so users know who to 
+							|contact in an emergency.
