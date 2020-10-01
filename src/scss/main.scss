@@ -58,6 +58,10 @@ h1, h2, h3 {
 		height: 80px;
 		width: 80px;
 	}
+	&_soc {
+		height: 48px;
+		width: 48px;
+	}
 }
 
 .btn {
@@ -615,5 +619,97 @@ h1, h2, h3 {
 
 	&__link {
 		color: #2174EA;
+	}
+}
+
+.footer {
+	background-color: $color-gray;
+	padding: 80px 0 40px;
+
+	&__body {
+		align-items: flex-start;
+		display: flex;
+		padding-bottom: 75px;
+		flex-wrap: wrap;
+
+		@include _768 {
+			padding-bottom: 30px;
+		}
+
+		@include _600 {
+			justify-content: space-between;
+		}
+	}
+
+	&__list {
+		margin-right: 80px;
+
+		@include _600 {
+			margin-bottom: 30px;
+			margin-right: 0;
+			width: 45%;
+
+			&:nth-child(2) {
+				text-align: right;
+			}
+		}
+
+		@include _480 {
+			width: 48%;
+		}
+	}
+
+	&__soc {
+		margin-left: auto;
+
+		@include _600 {
+			margin-left: 0;
+		}
+	}
+
+	&__title {
+		color: #7B8BA5;
+		margin-bottom: 28px;
+
+		@include _600 {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+
+			@include _600 {
+				margin-bottom: 10px;
+			}
+		}		
+	}
+
+	&__link {
+		transition: 0.3s;
+
+		&:hover {
+			color: $color-blue-dark;
+		}
+	}
+
+	&__bottom {
+		border-top: 1px solid #E0E6ED;
+		color: #7B8BA5;
+		padding-top: 40px;
+
+		@include _768 {
+			padding-top: 30px;
+		}
+	}
+}
+
+.soc {
+	align-items: center;
+	display: flex;
+
+	@include _768 {
+		flex-direction: column;
 	}
 }
