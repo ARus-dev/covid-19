@@ -54,6 +54,10 @@ h1, h2, h3 {
 			width: 240px;
 		}
 	}
+	&_trust {
+		height: 80px;
+		width: 80px;
+	}
 }
 
 .btn {
@@ -179,7 +183,7 @@ h1, h2, h3 {
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
-		padding: 62px 0;
+		padding: 15px 0;
 		width: 1000px;
 
 		@include _1366 {
@@ -298,6 +302,14 @@ h1, h2, h3 {
 	&__text {
 		margin-top: 30px;
 	}
+
+	&__companies {
+		margin-top: 150px;
+
+		@include _768 {
+			margin-top: 30px;
+		}
+	}
 }
 
 .row {
@@ -320,6 +332,20 @@ h1, h2, h3 {
 
 		@include _480 {
 			width: 100%;
+		}
+
+		&_half {
+			display: flex;
+			text-align: left;
+			width: 45%;
+
+			@include _768 {
+				width: 100%;
+			}
+
+			&>.row__img {
+				margin-right: 32px;
+			}
 		}
 	}
 
@@ -378,6 +404,7 @@ h1, h2, h3 {
 		}
 
 		&_horizontal {
+			background-color: #fff;
 			flex-direction: row;
 			margin-top: 20px;
 			width: 100%;
@@ -463,6 +490,40 @@ h1, h2, h3 {
 
 		@include _768 {
 			margin: 0 0 15px 0;
+		}
+	}
+}
+
+.companies {
+	&__title {
+		@include fs(14);
+		color: #7B8BA5;
+		margin-bottom: 57px;
+	}
+
+	&__list {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -40px 0;
+
+		@include _768 {
+			text-align: center;
+			margin: -20px 0;
+		}
+	}
+
+	&__item {
+		margin: 40px 0;
+		width: 25%;
+
+		@include _768 {
+			margin: 20px 0;
+			width: 50%;
+		}
+
+		@media (max-width: 374px) {
+			width: 100%;
 		}
 	}
 }
