@@ -32,6 +32,38 @@ h1, h2, h3 {
 	font-family: Roboto, sans-serif;
 }
 
+.cookie {
+	background-color: $color-blue-dark;
+	border-radius: 5px;
+	bottom: 80px;
+	box-shadow: 0px 10px 20px rgba(17, 41, 80, 0.48);
+	color: #fff;
+	display: none;
+	@include fs(16);
+	height: 120px;
+	padding: 30px;
+	position: fixed;
+	right: 40px;
+	width: 400px;
+	z-index: 100;
+
+	@include _480 {
+		right: 0;
+		width: 100%;
+	}
+
+	&__close {
+		background: rgba(255, 255, 255, 0.12);
+		border-radius: 0px 5px 0px 40px;
+		cursor: pointer;
+		height: 40px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+	}
+}
+
 .icon {
 	&_arrow {
 		height: 12px;
@@ -70,6 +102,7 @@ h1, h2, h3 {
 	border-radius: 30px;
 	color: #fff;
 	cursor: pointer;
+	display: inline-block;
 	padding: 18px 32px;
 	transition: 0.3s;
 
@@ -438,6 +471,12 @@ h1, h2, h3 {
 			margin-top: 20px;
 			width: 100%;
 
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			   &>.cards__content {
+			   		width: 50%;
+			   }
+			}
+
 			@include _960 {
 				flex-direction: column-reverse;
 			}
@@ -483,6 +522,10 @@ h1, h2, h3 {
 			@include _768 {
 				left: 0;
 				width: 100%;
+			}
+
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			   content: none;
 			}
 		}
 	}

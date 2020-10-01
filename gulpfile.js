@@ -38,6 +38,7 @@ function html() {
 
 function scripts() {
 	return src([
+		'node_modules/svg4everybody/dist/svg4everybody.min.js',
 		'src/js/main.js'
 	])
 	.pipe(concat('scripts.min.js'))

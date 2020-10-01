@@ -5,6 +5,11 @@ block variables
 	- const title = 'COVID-19'
 
 block content
+	.cookie
+		p We use cookies to deliver our services and analyze site traffic. 
+			|By using this website you agree to our 
+			a(href='') Privacy Policy
+		.cookie__close
 	header
 		.header
 			.header__top
@@ -31,7 +36,7 @@ block content
 						Assessment Tool
 					p.header__text A set of solutions designed to help quickly identify coronavirus symptoms 
 						|and get reliable information regarding COVID-19 concerns.
-					button.btn.header__btn See how to use it
+					a(href='#use').btn.header__btn See how to use it
 				.header__img
 					img(src='img/header/header-img.png' alt="Application interface")
 	main
@@ -58,7 +63,7 @@ block content
 						h3.row__title Local information
 						p We provide phone numbers of local health authorities so users know who to 
 							|contact in an emergency.
-		section.section
+		section.section#use
 			.wrapper
 				.section__info
 					h2.section__title How to use it
@@ -97,7 +102,7 @@ block content
 								|feel free to embed the COVID-19 Risk Assessment tool on your website. 
 								|Let's stop the coronavirus from spreading.
 							.cards__buttons
-								a.btn.btn_border.cards__btn(href="#") Go to Symptomate.com
+								a.btn.btn_border.cards__btn(href="https://symptomate.com/") Go to Symptomate.com
 						.cards__img
 							+svg('share', 'card')
 		section.section.section_gray
@@ -235,3 +240,4 @@ block content
 							+svg('youtube', 'soc')
 			.footer__bottom
 				p © Infermedica 2020
+	script(src='js/scripts.min.js')
