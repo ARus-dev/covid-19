@@ -282,6 +282,23 @@ h1, h2, h3 {
 		background-color: $color-gray;
 	}
 
+	&_align_center {
+		text-align: center;
+
+		& .section__info {
+			margin: 0 auto;
+			width: 50%;
+
+			@include _480 {
+				width: 100%;
+			}
+
+			&>.section__text {
+				margin-bottom: 42px;
+			}
+		}
+	}
+
 	&__info {
 		margin-bottom: 60px;
 		width: 60%;
